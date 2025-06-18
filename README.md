@@ -25,6 +25,8 @@
 
 <br/>
 
+** This fork adds dockerization to this beautiful app and modifies some branding **
+
 Samay is a free and open source group scheduling tool. Quickly find a time which works for everyone without the back-and-forth texts/emails!
 
 > #### Create a poll
