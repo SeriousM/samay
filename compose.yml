@@ -1,0 +1,34 @@
+services:
+  app:
+    image: samay
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+        - .:/app
+        - /app/node_modules
+        - /app/.next
+    ports:
+      - "3004:3000"
+    depends_on:
+      - mongodb
+    environment:
+      - NEXT_MONGODB_URI=mongodb://mongodb:27017/samayPolls
+      - NEXT_PUBLIC_ENCRYPTION_KEY=11dfe6084627c69ef02220c60f34f4cd
+      - NEXT_PUBLIC_ENCRYPTION_IV=3a818dc74cb58adc
+      - NEXT_PUBLIC_BASE_URL=https://dhammapoll.neuma.studio
+
+  mongodb:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017" # Expose MongoDB on the default port
+    volumes:
+      - mongo-data:/data/db # Persist MongoDB data
+      - mongo-config:/data/configdb # Persist MongoDB configuration
+
+volumes:
+  mongo-data:
+    driver: local
+  mongo-config:
+    driver: local
