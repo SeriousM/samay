@@ -40,20 +40,6 @@ const BottomNav = (): JSX.Element => {
           <PlusCircle className="bottom-nav-link-icon" />
         </a>
       </Link>
-      <Link href="https://github.com/samayapp/samay">
-        <a className="bottom-nav-link">
-          <Github className="bottom-nav-link-icon" />
-        </a>
-      </Link>
-      <Link href="/privacy">
-        <a
-          className={`bottom-nav-link ${
-            router.pathname === "/privacy" ? ` active` : ``
-          }`}
-        >
-          <Lock className="bottom-nav-link-icon" />
-        </a>
-      </Link>
     </div>
   );
 };
