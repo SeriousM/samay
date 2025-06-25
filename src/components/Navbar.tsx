@@ -28,7 +28,7 @@ const NavBar = (): JSX.Element => {
       <Container className="navbar-container">
         <Navbar.Brand href="/" className="navbar-brand">
           <LogoSVG className="navbar-logo" />
-          <span className="navbar-logo-text">Samay for DhammaOrg</span>
+          <span className="navbar-logo-text">Samay per Fabio</span>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
@@ -38,12 +38,12 @@ const NavBar = (): JSX.Element => {
           <Nav className="ml-auto">
             <Link href="/">
               <a className="navbar-link">
-                <PlusCircle className="navbar-link-icon" /> New poll
+                <PlusCircle className="navbar-link-icon" /> Nuovo sondaggio
               </a>
             </Link>
             <Link href="/recent-polls">
               <a className="navbar-link">
-                <Grid className="navbar-link-icon" /> Recent polls
+                <Grid className="navbar-link-icon" /> Recenti
               </a>
             </Link>
             {router.pathname.match(/\//g).length === 2 ? (

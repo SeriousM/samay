@@ -145,7 +145,7 @@ const Poll = (props: {
   return (
     <>
       <Head>
-        <title>Samay — mark your availability</title>
+        <title>Samay — segna le tue disponibilità</title>
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

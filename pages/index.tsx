@@ -60,7 +60,7 @@ const Home = (): JSX.Element => {
     e.preventDefault();
 
     if (!pollTimes || (pollTimes && pollTimes?.length < 2)) {
-      toast.error("Please select at least two time slots", toastOptions);
+      toast.error("Per favore scegli almeno due slot", toastOptions);
       return;
     }
 
@@ -130,13 +130,13 @@ const Home = (): JSX.Element => {
   return (
     <>
       <Head>
-        <title>Samay — find a time which works for everyone</title>
+        <title>Samay — trova uno slot che accontenti tutti</title>
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="title"
-          content="Samay — find a time which works for everyone"
+          content="Samay — trova uno slot che accontenti tutti"
         />
         <meta
           name="description"
@@ -146,7 +146,7 @@ const Home = (): JSX.Element => {
         <meta property="og:url" content="https://samay.app" />
         <meta
           property="og:title"
-          content="Samay — find a time which works for everyone"
+          content="Samay — trova uno slot che accontenti tutti"
         />
         <meta
           property="og:description"
@@ -157,7 +157,7 @@ const Home = (): JSX.Element => {
         <meta property="twitter:url" content="https://samay.app" />
         <meta
           property="twitter:title"
-          content="Samay — find a time which works for everyone"
+          content="Samay — trova uno slot che accontenti tutti"
         />
         <meta
           property="twitter:description"
@@ -178,7 +178,7 @@ const Home = (): JSX.Element => {
                     className="form-text"
                     type="text"
                     maxLength={30}
-                    placeholder="Title"
+                    placeholder="Titolo"
                     name="pollTitle"
                     onChange={handlePollDetailsChange}
                   />
@@ -189,33 +189,9 @@ const Home = (): JSX.Element => {
                     type="text"
                     name="pollDescription"
                     maxLength={50}
-                    placeholder="Description"
+                    placeholder="Descrizione"
                     onChange={handlePollDetailsChange}
                   />
-                </Col>
-                <Col sm className="samay-form-col">
-                  <Form.Control
-                    className="form-text"
-                    type="text"
-                    name="pollLocation"
-                    maxLength={40}
-                    placeholder="Location"
-                    onChange={handlePollDetailsChange}
-                  />
-                </Col>
-                <Col sm className="samay-form-col">
-                  <Form.Group className="form-group">
-                    <Form.Control
-                      as="select"
-                      className="form-select"
-                      name="pollType"
-                      defaultValue="group"
-                      onChange={handlePollTypeChange}
-                    >
-                      <option value="group">Group poll</option>
-                      <option value="oneonone">One-on-one poll</option>
-                    </Form.Control>
-                  </Form.Group>
                 </Col>
                 <Col sm="auto">
                   <Button
@@ -224,7 +200,7 @@ const Home = (): JSX.Element => {
                     disabled={disabled}
                   >
                     {!disabled ? (
-                      `Create`
+                      `Crea`
                     ) : (
                       <>
                         <Spinner
